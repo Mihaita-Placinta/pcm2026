@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { categories } from "./data/quizData";
+import LoginScreen from "./LoginScreen.jsx";
 
 // ─── tiny helpers ────────────────────────────────────────────────────────────
 const LABELS = ["A", "B", "C", "D"];
 
-// Funcție pentru a verifica dacă utilizatorul a selectat TOATE răspunsurile corecte (și nimic în plus)
+// Funcție pentru a verifica dacă utilizatorul a selectat TOATE răspunsurile corecte
 function areArraysEqual(arr1, arr2) {
   if (!arr1 || !arr2 || arr1.length !== arr2.length) return false;
   const sorted1 = [...arr1].sort((a, b) => a - b);
@@ -51,7 +52,7 @@ function QuizScreen({ category, onFinish }) {
   const questions = category.questions;
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState([]);        // Array de indexuri [0, 2]
-  const [confirmed, setConfirmed] = useState(false);     
+  const [confirmed, setConfirmed] = useState(false);    
   const [answers, setAnswers] = useState([]);            
 
   const q = questions[current];
@@ -61,7 +62,6 @@ function QuizScreen({ category, onFinish }) {
   function choose(idx) {
     if (confirmed) return;
     
-    // Toggle: dacă e selectat îl scoatem, dacă nu, îl adăugăm
     if (selected.includes(idx)) {
       setSelected(selected.filter((item) => item !== idx));
     } else {
@@ -81,12 +81,11 @@ function QuizScreen({ category, onFinish }) {
     } else {
       setAnswers(newAnswers);
       setCurrent(current + 1);
-      setSelected([]); // Resetăm selecția la un array gol
+      setSelected([]); 
       setConfirmed(false);
     }
   }
 
-  // Identifică precis starea fiecărui buton după confirmare
   function optionClass(idx) {
     const isSelected = selected.includes(idx);
     const isCorrectOption = q.correct.includes(idx);
@@ -96,7 +95,7 @@ function QuizScreen({ category, onFinish }) {
     if (isSelected && isCorrectOption) return "opt correct";      // Bifat și corect
     if (isSelected && !isCorrectOption) return "opt wrong";       // Bifat și greșit
     if (!isSelected && isCorrectOption) return "opt omitted";     // Trebuia bifat, dar a fost omis
-    return "opt";                                                 // Nebifat și greșit (normal)
+    return "opt";                                                 // Nebifat și greșit
   }
 
   return (
@@ -134,7 +133,6 @@ function QuizScreen({ category, onFinish }) {
                 className={optionClass(idx)}
                 onClick={() => choose(idx)}
               >
-                {/* Fără checkbox-uri grafice, doar litera curată */}
                 <span className="opt-label">{LABELS[idx]}</span>
                 <span className="opt-text">{opt}</span>
                 
@@ -188,7 +186,6 @@ function QuizScreen({ category, onFinish }) {
 function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
   const [tab, setTab] = useState("all");
 
-  // Calculează scorul complet corect (doar când array-urile sunt 100% identice)
   const score = answers.filter((a) => areArraysEqual(a.chosen, a.correct)).length;
   const total = questions.length;
   const pct = Math.round((score / total) * 100);
@@ -240,7 +237,6 @@ function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
         )}
         
         {displayList.map((ans, i) => {
-          // Găsește indexul real din lista de întrebări
           const qIdx = tab === "all" ? i : answers.indexOf(ans);
           const q = questions[qIdx];
           const isCorrect = areArraysEqual(ans.chosen, ans.correct);
@@ -256,12 +252,11 @@ function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
               <p className="rc-question">{q.question}</p>
               
               <div className="rc-answers">
-                {/* RĂSPUNSUL TĂU CU NUME ȘI LITERE */}
                 <div className={`rc-answer ${isCorrect ? "rc-ans-correct" : "rc-ans-wrong"}`}>
                   <strong>Răspunsul tău:</strong>{" "}
                   {ans.chosen.length > 0 ? (
                     <div className="review-chosen-items">
-                      {ans.chosen.sort((a,b)=>a-b).map(idx => (
+                      {[...ans.chosen].sort((a,b)=>a-b).map(idx => (
                         <div key={idx} className="answer-line">
                           <span className="inline-letter">{LABELS[idx]}.</span> {q.options[idx]}
                         </div>
@@ -272,12 +267,11 @@ function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
                   )}
                 </div>
 
-                {/* RĂSPUNSUL CORECT CU NUME ȘI LITERE (dacă ai greșit) */}
                 {!isCorrect && (
                   <div className="rc-answer rc-ans-correct" style={{ marginTop: "10px" }}>
-                    <strong>Răspuns corect corect:</strong>{" "}
+                    <strong>Răspuns corect:</strong>{" "}
                     <div className="review-correct-items">
-                      {q.correct.sort((a,b)=>a-b).map(idx => (
+                      {[...q.correct].sort((a,b)=>a-b).map(idx => (
                         <div key={idx} className="answer-line">
                           <span className="inline-letter">{LABELS[idx]}.</span> {q.options[idx]}
                         </div>
@@ -313,6 +307,19 @@ export default function App() {
   const [screen, setScreen] = useState("home"); 
   const [activeCategory, setActiveCategory] = useState(null);
   const [finalAnswers, setFinalAnswers] = useState([]);
+  
+  // Soluția pentru stările de Login, mutate în interiorul componentei
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
+
+  function login() {
+    if (username === "pcm2026" && password === "amluatexamenul") {
+      setAuthenticated(true);
+    } else {
+      alert("Utilizator sau parolă incorectă!");
+    }
+  }
 
   function startQuiz(cat) {
     setActiveCategory(cat);
@@ -335,12 +342,29 @@ export default function App() {
     setScreen("home");
   }
 
+  if (!authenticated) {
+    return (
+      <LoginScreen
+        username={username}
+        password={password}
+        setUsername={setUsername}
+        setPassword={setPassword}
+        onLogin={login}
+      />
+    );
+  }
+
   return (
     <>
       {screen === "home" && <CategorySelect onSelect={startQuiz} />}
+
       {screen === "quiz" && activeCategory && (
-        <QuizScreen category={activeCategory} onFinish={finishQuiz} />
+        <QuizScreen
+          category={activeCategory}
+          onFinish={finishQuiz}
+        />
       )}
+
       {screen === "results" && (
         <ResultsScreen
           answers={finalAnswers}
