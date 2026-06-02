@@ -20,7 +20,6 @@ function LoginScreen({
         {/* Coloana Stângă: Branding & Inspirație */}
         <div className="login-sidebar">
           <div className="sidebar-content">
-            <span className="sidebar-logo-icon">🚀</span>
             <h2>Pregătește-te pentru succes!</h2>
             <p>Accesează testele PCM 2026 și verifică-ți cunoștințele capitol cu capitol.</p>
           </div>

@@ -95,7 +95,15 @@ body {
   box-shadow: var(--shadow);
   border-color: var(--accent);
 }
-.cat-icon { font-size: 2.2rem; flex-shrink: 0; }
+.cat-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cat-info { flex: 1; }
 .cat-title {
   font-family: 'Poppins', sans-serif;
@@ -125,10 +133,27 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 4px 0;
+  gap: 12px;
+}
+.btn-cancel {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background .2s;
+}
+.btn-cancel:hover {
+  background: var(--border);
 }
 .quiz-cat-label {
   font-weight: 800;
   font-size: .95rem;
+  flex: 1;
+  text-align: center;
 }
 .quiz-counter {
   background: var(--surface);
@@ -138,6 +163,7 @@ body {
   font-weight: 700;
   font-size: .9rem;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .progress-track {
@@ -226,7 +252,46 @@ body {
 .opt.correct .opt-label { background: #16a34a; color: white; border-color: #16a34a; }
 .opt.wrong .opt-label   { background: #dc2626; color: white; border-color: #dc2626; }
 
-.opt-text { flex: 1; }
+.opt-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.opt-formula-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid #e2e8f4;
+  display: block;
+}
+.question-image-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 8px;
+}
+.question-image {
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid #e2e8f4;
+}
+.review-question-image {
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid #e2e8f4;
+  margin: 6px 0;
+  display: block;
+}
 .opt-badge {
   font-size: 1rem;
   font-weight: 900;
@@ -249,8 +314,17 @@ body {
 
 .quiz-actions {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
+  align-items: center;
+}
+.quiz-actions .btn-ghost {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 15px 20px;
+}
+.quiz-actions .btn-primary {
+  flex: 1;
 }
 
 /* ───────────────────────────────── BUTTONS ── */
@@ -701,5 +775,117 @@ body {
   
   .login-form-area {
     padding: 32px 24px;
+  }
+}
+
+/* ───────────────────────────────── MODAL ── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  animation: slideUp .3s ease-out;
+  padding: 16px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-box {
+  background: var(--surface);
+  border-radius: 16px 16px 0 0;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.modal-header h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  transition: background .2s, color .2s;
+}
+
+.modal-close:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.modal-message {
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    align-items: center;
+  }
+
+  .modal-box {
+    border-radius: 12px;
+    max-width: 90vw;
   }
 }

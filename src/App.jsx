@@ -48,20 +48,39 @@ function CategorySelect({ onSelect }) {
 }
 
 // ─── Quiz screen ──────────────────────────────────────────────────────────────
-function QuizScreen({ category, onFinish }) {
+function QuizScreen({ category, onFinish, onCancel }) {
   const questions = category.questions;
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState([]);        // Array de indexuri [0, 2]
-  const [confirmed, setConfirmed] = useState(false);    
-  const [answers, setAnswers] = useState([]);            
+  const [confirmed, setConfirmed] = useState(false);
+  const [answers, setAnswers] = useState(Array(questions.length).fill(null));
+  const [showCancelModal, setShowCancelModal] = useState(false);            
 
   const q = questions[current];
   const isLast = current === questions.length - 1;
+  const isFirst = current === 0;
   const progress = (current / questions.length) * 100;
+
+  function loadQuestionState(qIndex) {
+    const saved = answers[qIndex];
+    if (saved) {
+      setSelected(saved.chosen);
+      setConfirmed(true);
+    } else {
+      setSelected([]);
+      setConfirmed(false);
+    }
+  }
+
+  function saveCurrentAnswer() {
+    const newAnswers = [...answers];
+    newAnswers[current] = { chosen: selected, correct: q.correct };
+    setAnswers(newAnswers);
+  }
 
   function choose(idx) {
     if (confirmed) return;
-    
+
     if (selected.includes(idx)) {
       setSelected(selected.filter((item) => item !== idx));
     } else {
@@ -71,18 +90,24 @@ function QuizScreen({ category, onFinish }) {
 
   function verify() {
     if (selected.length === 0) return;
+    saveCurrentAnswer();
     setConfirmed(true);
   }
 
   function next() {
-    const newAnswers = [...answers, { chosen: selected, correct: q.correct }];
     if (isLast) {
-      onFinish(newAnswers, questions);
+      onFinish(answers.filter(a => a !== null), questions);
     } else {
-      setAnswers(newAnswers);
       setCurrent(current + 1);
-      setSelected([]); 
-      setConfirmed(false);
+      loadQuestionState(current + 1);
+    }
+  }
+
+  function prev() {
+    if (!isFirst) {
+      saveCurrentAnswer();
+      setCurrent(current - 1);
+      loadQuestionState(current - 1);
     }
   }
 
@@ -98,9 +123,15 @@ function QuizScreen({ category, onFinish }) {
     return "opt";                                                 // Nebifat și greșit
   }
 
+  function confirmCancel() {
+    setShowCancelModal(false);
+    onCancel();
+  }
+
   return (
     <div className="page quiz-page">
       <div className="quiz-topbar">
+        <button className="btn-cancel" onClick={() => setShowCancelModal(true)}>← Anulează</button>
         <span className="quiz-cat-label" style={{ color: category.color }}>
           {category.icon} {category.title}
         </span>
@@ -118,6 +149,11 @@ function QuizScreen({ category, onFinish }) {
 
       <div className="question-card">
         <p className="question-text">{q.question}</p>
+        {q.questionImage && (
+          <div className="question-image-wrap">
+            <img src={q.questionImage} alt="Formulă structurală" className="question-image" />
+          </div>
+        )}
         <small className="quiz-hint">
           💡 Răspuns multiplu. Selectează toate variantele pe care le consideri corecte.
         </small>
@@ -134,7 +170,12 @@ function QuizScreen({ category, onFinish }) {
                 onClick={() => choose(idx)}
               >
                 <span className="opt-label">{LABELS[idx]}</span>
-                <span className="opt-text">{opt}</span>
+                <span className="opt-text">
+                  {opt && <span>{opt}</span>}
+                  {q.optionImages?.[idx] && (
+                    <img src={q.optionImages[idx]} alt="" className="opt-formula-img" />
+                  )}
+                </span>
                 
                 {confirmed && isCorrectOption && isSelected && (
                   <span className="opt-badge correct-badge">✓ Corect</span>
@@ -150,15 +191,17 @@ function QuizScreen({ category, onFinish }) {
           })}
         </div>
 
-        {confirmed && (
-          <div className="explanation">
-            <span className="expl-icon">💡</span>
-            <p>{q.explanation}</p>
-          </div>
-        )}
       </div>
 
       <div className="quiz-actions">
+        <button
+          className="btn btn-ghost"
+          onClick={prev}
+          disabled={isFirst}
+        >
+          ← Înapoi
+        </button>
+
         {!confirmed ? (
           <button
             className="btn btn-primary"
@@ -178,6 +221,26 @@ function QuizScreen({ category, onFinish }) {
           </button>
         )}
       </div>
+
+      {showCancelModal && (
+        <div className="modal-overlay" onClick={() => setShowCancelModal(false)}>
+          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>Anulezi examenul?</h2>
+              <button className="modal-close" onClick={() => setShowCancelModal(false)}>✕</button>
+            </div>
+            <p className="modal-message">Dacă îl anulezi acum, progresul tău nu va fi salvat și vei merge la pagina principală.</p>
+            <div className="modal-actions">
+              <button className="btn btn-ghost" onClick={() => setShowCancelModal(false)}>
+                Continuă examenul
+              </button>
+              <button className="btn btn-danger" onClick={confirmCancel}>
+                Anulează examenul
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -250,7 +313,10 @@ function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
                 <span className="rc-qnum">Întrebarea {qIdx + 1}</span>
               </div>
               <p className="rc-question">{q.question}</p>
-              
+              {q.questionImage && (
+                <img src={q.questionImage} alt="Formulă structurală" className="review-question-image" />
+              )}
+
               <div className="rc-answers">
                 <div className={`rc-answer ${isCorrect ? "rc-ans-correct" : "rc-ans-wrong"}`}>
                   <strong>Răspunsul tău:</strong>{" "}
@@ -259,6 +325,9 @@ function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
                       {[...ans.chosen].sort((a,b)=>a-b).map(idx => (
                         <div key={idx} className="answer-line">
                           <span className="inline-letter">{LABELS[idx]}.</span> {q.options[idx]}
+                          {q.optionImages?.[idx] && (
+                            <img src={q.optionImages[idx]} alt="" className="opt-formula-img" />
+                          )}
                         </div>
                       ))}
                     </div>
@@ -274,13 +343,15 @@ function ResultsScreen({ answers, questions, category, onRestart, onHome }) {
                       {[...q.correct].sort((a,b)=>a-b).map(idx => (
                         <div key={idx} className="answer-line">
                           <span className="inline-letter">{LABELS[idx]}.</span> {q.options[idx]}
+                          {q.optionImages?.[idx] && (
+                            <img src={q.optionImages[idx]} alt="" className="opt-formula-img" />
+                          )}
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
               </div>
-              <p className="rc-explanation">💡 {q.explanation}</p>
             </div>
           );
         })}
@@ -308,13 +379,12 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
   const [finalAnswers, setFinalAnswers] = useState([]);
   
-  // Soluția pentru stările de Login, mutate în interiorul componentei
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
 
   function login() {
-    if (username === "pcm2026" && password === "amluatexamenul") {
+    if (username === "pcm2026" && password === "examen2026") {
       setAuthenticated(true);
     } else {
       alert("Utilizator sau parolă incorectă!");
@@ -362,6 +432,7 @@ export default function App() {
         <QuizScreen
           category={activeCategory}
           onFinish={finishQuiz}
+          onCancel={goHome}
         />
       )}
 
