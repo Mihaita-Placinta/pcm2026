@@ -1,6 +1,6 @@
 const principiisimetode = {
   id: "principiisimetode",
-  title: "Principii si Metode de Conservare",
+  title: "Principii si Metode de Conservare a produselor alimentare",
   icon: "🥫",
   color: "#16a34a",
   questions: [
@@ -162,7 +162,7 @@ const principiisimetode = {
         "sedimentare",
         "ultracentrifugare"
       ],
-      correct: [0, 1, 2]
+      correct: [0, 2]
     },
     {
       id: 17,
@@ -242,7 +242,7 @@ const principiisimetode = {
         "100 MHz",
         "300 MHz"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 25,
@@ -312,7 +312,7 @@ const principiisimetode = {
         "racirea la +20...+25 °C",
         "ambalare in conditii aseptice"
       ],
-      correct: [0, 1, 2]
+      correct: [ 1, 2]
     },
     {
       id: 32,
@@ -332,7 +332,7 @@ const principiisimetode = {
         "ultraprapida",
         "rapida"
       ],
-      correct: [0, 1, 2]
+      correct: [0, 2]
     },
     {
       id: 34,

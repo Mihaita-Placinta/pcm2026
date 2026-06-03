@@ -12,7 +12,7 @@ const microbiologie = {
         "sunt organisme pluricelulare, cu organizare de tip eucariot",
         "formeaza micorize cu radacinile plantelor"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 2,
@@ -202,7 +202,7 @@ const microbiologie = {
         "microorganismele strict anaeobe folosesc O2 ca acceptor final de H",
         "microorganismele microaerofile au nevoie de o concentratie de O2 mai mare decat cea din aerul atmosferic"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 21,
@@ -422,7 +422,7 @@ const microbiologie = {
         "Clostridium spp.",
         "Azospirillum spp."
       ],
-      correct: [0, 1, 2]
+      correct: [0, 2]
     },
     {
       id: 43,
@@ -472,7 +472,7 @@ const microbiologie = {
         "Pseudomonas denitrificans",
         "Bacillus megaterium"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 48,
@@ -582,7 +582,7 @@ const microbiologie = {
         "Botrytis",
         "Rhodothorula"
       ],
-      correct: [0, 1, 2]
+      correct: [0, 2]
     },
     {
       id: 59,
@@ -622,7 +622,7 @@ const microbiologie = {
         "acizii organici",
         "substantele insecticide"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 63,
@@ -632,7 +632,7 @@ const microbiologie = {
         "modificari chimice",
         "impurificari"
       ],
-      correct: [1]
+      correct: [0, 1, 2]
     },
     {
       id: 64,
@@ -652,7 +652,7 @@ const microbiologie = {
         "ciupercii",
         "protozoare"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 66,
@@ -672,7 +672,7 @@ const microbiologie = {
         "mineralizare",
         "co-metabolism"
       ],
-      correct: [0, 1, 2]
+      correct: [1, 2]
     },
     {
       id: 68,
@@ -692,7 +692,7 @@ const microbiologie = {
         "Azotobacter",
         "Bacillus"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 70,

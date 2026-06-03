@@ -22,7 +22,7 @@ const managementulCalitatii = {
         "diagrama cauza-efect",
         "diagrama de afinitate"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const managementulCalitatii = {
         "diagrama flux",
         "diagrama cauza-efect"
       ],
-      correct: [2]
+      correct: [0,1, 2]
     },
     {
       id: 4,
@@ -82,7 +82,7 @@ const managementulCalitatii = {
         "sistemul calitatii este prevenirea, si nu evaluarea",
         "schimbarea culturii spre a face bine de prima data"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 9,
@@ -312,7 +312,7 @@ const managementulCalitatii = {
         "produs",
         "proces"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 32,
@@ -332,7 +332,7 @@ const managementulCalitatii = {
         "sa asigure indeplinirea cerintelor furnizorilor",
         "sa asigure indeplinirea cerintelor organizatiei"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 34,
@@ -342,7 +342,7 @@ const managementulCalitatii = {
         "performanta la standarde",
         "conformitatea cu specificatiile"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 35,
@@ -362,7 +362,7 @@ const managementulCalitatii = {
         "costurile generate de defectiuni ale produselor",
         "costurile generate de defectiuni in sistemul de management al calitatii"
       ],
-      correct: [0, 2]
+      correct: [0, 1, 2]
     },
     {
       id: 37,
@@ -392,7 +392,7 @@ const managementulCalitatii = {
         "timpul si resursele necesare pentru a primi si raspunde la reclamatiile clientilor",
         "timpul si resursele necesare pentru a corecta defectele"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 40,
@@ -492,7 +492,7 @@ const managementulCalitatii = {
         "asigurarea ca datele si informatiile sunt suficient de exacte si fiabile",
         "stabilirea de responsabilitati clare si cuantificabile pentru activitatile importante de conducere"
       ],
-      correct: [0, 2]
+      correct: [0]
     },
     {
       id: 50,
@@ -502,7 +502,7 @@ const managementulCalitatii = {
         "produse si servicii; personal; procese",
         "echipe; instrumente; sisteme"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 51,
@@ -582,7 +582,7 @@ const managementulCalitatii = {
         "calitatea este o variabila continua si nu discreta",
         "calitatea este exprimata printr-o singura caracteristica"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 59,

@@ -42,7 +42,7 @@ const tehnologiaproduselor = {
         "maxim 30 zile",
         "minim 10 zile"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ const tehnologiaproduselor = {
         "maxim 2%",
         "maxim 5%"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 7,
@@ -82,7 +82,7 @@ const tehnologiaproduselor = {
         "umiditatea crescutâ a produselor",
         "neventilația vâlvurilor"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 9,
@@ -102,7 +102,7 @@ const tehnologiaproduselor = {
         "maxim 35°C",
         "minim 30°C"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 11,
@@ -262,7 +262,7 @@ const tehnologiaproduselor = {
         "diferente de greutate specifică",
         "proprietati magnetice"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 27,
@@ -312,7 +312,7 @@ const tehnologiaproduselor = {
         "acizii grasii liberi și cei rezultați din hidroliza trigliceridelor",
         "acidul glutamic din structura proteinelor"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 32,
@@ -322,7 +322,7 @@ const tehnologiaproduselor = {
         "gradul de gelatinizare",
         "gradul de deteriorare"
       ],
-      correct: [0, 1]
+      correct: [1, 2]
     },
     {
       id: 33,
@@ -432,7 +432,7 @@ const tehnologiaproduselor = {
         "minim 15%",
         "maxim 20%"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 44,
@@ -442,7 +442,7 @@ const tehnologiaproduselor = {
         "minim 80%",
         "95%"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 45,
@@ -452,7 +452,7 @@ const tehnologiaproduselor = {
         "5 zile",
         "30 zile"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 46,

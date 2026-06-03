@@ -32,7 +32,7 @@ const ecologieMediu = {
         "abiotici",
         "biotici"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 4,
@@ -62,7 +62,7 @@ const ecologieMediu = {
         "legea toleranței",
         "legea acțiunii combinate"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 7,
@@ -72,7 +72,7 @@ const ecologieMediu = {
         "mezofile",
         "xerofile"
       ],
-      correct: [2]
+      correct: [0, 1, 2]
     },
     {
       id: 8,
@@ -82,7 +82,7 @@ const ecologieMediu = {
         "acționează ca factor ecologic prin proprietățile sale fizice și chimice",
         "prin însuşirea sa de fertilitate, este capabil să întreţine viaţa plantelor"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 9,
@@ -112,7 +112,7 @@ const ecologieMediu = {
         "aparțin grupului ecologic de plante euriionice",
         "cresc numai pe soluri salinizate"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 12,
@@ -122,7 +122,7 @@ const ecologieMediu = {
         "răspândirea fructelor și semințelor",
         "polenizarea plantelor entomofil"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 13,
@@ -132,7 +132,7 @@ const ecologieMediu = {
         "este utilizat de plante în procesul de fotosinteză",
         "contribuie la crearea efectului de seră"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 14,
@@ -142,7 +142,7 @@ const ecologieMediu = {
         "aparțin grupului ecologic de plante euriionice",
         "preferă soluri cu valori ale pH-ului sub 7"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 15,
@@ -212,7 +212,7 @@ const ecologieMediu = {
         "între ciuperci și alge, în cazul lichenilor",
         "între plantele entomofil și insectele polenizatoare"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 22,
@@ -272,7 +272,7 @@ const ecologieMediu = {
         "functia de circulatie a materiei",
         "functia de autoreglare"
       ],
-      correct: [1, 2]
+      correct: [0, 1, 2]
     },
     {
       id: 28,
@@ -292,7 +292,7 @@ const ecologieMediu = {
         "poate fi: primară și secundară",
         "este generata de interactiunea dintre biocenoza și biotopul său"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 30,
@@ -322,7 +322,7 @@ const ecologieMediu = {
         "prezinta un consum alimentar deficitar in glucide si lipide",
         "prin felul de nutritie si prin cerintele pentru ambalarea producuselor, contribuie substantial la poluarea mediului"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 33,
@@ -332,7 +332,7 @@ const ecologieMediu = {
         "plaseaza omul pe pozitia de consumator primar",
         "plaseaza omul pe pozitia de consumator tertiar"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 34,
@@ -342,7 +342,7 @@ const ecologieMediu = {
         "se asociaza cu riscuri mari de a dezvolta unele boli",
         "contribuie mai mult la poluarea mediului, prin ceea ce presupune cresterea animalelor si prelucrarea producuselor"
       ],
-      correct: [2]
+      correct: [0,1,2]
     },
     {
       id: 35,
@@ -442,7 +442,7 @@ const ecologieMediu = {
         "intensive",
         "industriale sau industrializate"
       ],
-      correct: [1]
+      correct: [0, 1, 2]
     },
     {
       id: 45,
@@ -482,7 +482,7 @@ const ecologieMediu = {
         "despăduririle",
         "folosirea unor tehnologii agricole necorespunzatoare"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 49,
@@ -492,7 +492,7 @@ const ecologieMediu = {
         "exploatarii excesive a unor suprafete de teren",
         "functionarii necorespunzatoare a fermelor zootehnice mari"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 50,
@@ -502,7 +502,7 @@ const ecologieMediu = {
         "eliminarea substanțelor nocive din aer, apă sau sol pentru protejarea sănătății umane și a calității mediului",
         "introducerea directă sau indirectă, ca rezultat al activității umane, a unor substanțe, vibrații, căldură sau zgomot în aer, apă sau sol, care pot aduce prejudicii sănătății umane sau calității mediului"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 51,
@@ -512,7 +512,7 @@ const ecologieMediu = {
         "chimică",
         "biologică"
       ],
-      correct: [2]
+      correct: [0, 1, 2]
     },
     {
       id: 52,
@@ -528,11 +528,11 @@ const ecologieMediu = {
       id: 53,
       question: "Solurile pot fi degradate prin (răspuns multiplu):",
       options: [
-        "săturare",
+        "sărăturare",
         "acidifiere",
         "eroziune"
       ],
-      correct: [1, 2]
+      correct: [0, 1, 2]
     },
     {
       id: 54,
@@ -552,7 +552,7 @@ const ecologieMediu = {
         "furtunile de praf si nisip, care contribuie la extinderea deșerturilor",
         "vulcanii activi care emana in atmosfera lava, pulberi si gaze"
       ],
-      correct: [0]
+      correct: [0,1, 2]
     },
     {
       id: 56,
@@ -572,7 +572,7 @@ const ecologieMediu = {
         "include diversitatea intraspecifica si pe cea interspecifica",
         "poate fi conservata in situ si ex situ"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 58,
@@ -582,7 +582,7 @@ const ecologieMediu = {
         "este o consecință a folosirii excesive, în agricultură, a îngrășămintelor pe bază de azot",
         "determina fenomenul de eutrofizare"
       ],
-      correct: [2]
+      correct: [1, 2]
     },
     {
       id: 59,
@@ -592,7 +592,7 @@ const ecologieMediu = {
         "are la baza idea de a asigura o calitate mai bună a vieții pentru toți locuitori planetei, atât pentru generația prezentă, cât și pentru generațiile viitoare",
         "a fost gândit ca o soluție la criza ecologică generată de intensa exploatare industrială a resurselor și de degradarea continuă a mediului"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 60,
@@ -602,7 +602,7 @@ const ecologieMediu = {
         "este instrumentul principal pentru conservarea patrimoniului natural pe teritoriul Uniunii Europene",
         "este instrumentul principal pentru exploatarea pădurilor pe teritoriul Uniunii Europene"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 61,
@@ -612,7 +612,7 @@ const ecologieMediu = {
         "generalizarea conceptiei stiintifice despre importanta conservarii resurselor naturale ale biosferei si pentru generatiile viitoare",
         "exploatarea nelimitată a resurselor, precum și consumul exclusiv de produse exotice, provenite de la distanțe mari"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 62,
@@ -622,7 +622,7 @@ const ecologieMediu = {
         "se bazează pe conservarea in natura, pe crearea și managementul ariilor protejate",
         "se bazează pe conservarea speciilor in grădini botanice și zoologice"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 63,
@@ -632,7 +632,7 @@ const ecologieMediu = {
         "se bazează pe păstrarea speciilor în grădini botanice, grădini zoologice, acvarii",
         "se bazează pe crearea și managementul ariilor protejate"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 64,
@@ -662,7 +662,7 @@ const ecologieMediu = {
         "anumite suprafete emblematice din Parcul Național Retezat",
         "anumite suprafete emblematice din Parcul Național Munții Rodnei"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 67,
@@ -682,7 +682,7 @@ const ecologieMediu = {
         "stabilizarea proceselor ecologice",
         "intensificarea activităților industriale"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 69,
@@ -692,7 +692,7 @@ const ecologieMediu = {
         "cresterea stabilitatii ecosistemelor",
         "reducerea suprafetelor împăduite"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 70,

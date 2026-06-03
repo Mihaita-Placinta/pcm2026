@@ -1,6 +1,6 @@
 const sigurantasisecuritate = {
   id: "sigurantasisecuritate",
-  title: "Siguranta si Securitate Alimentara",
+  title: "Siguranta si Securitate Alimentara in protectia consumatorului",
   icon: "🛡️",
   color: "#dc2626",
   questions: [
@@ -262,7 +262,7 @@ const sigurantasisecuritate = {
         "menționarea cauzelor care genereaza defectele potențiale",
         "precizarea efectelor posibile ale defectelor"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 27,
@@ -362,7 +362,7 @@ const sigurantasisecuritate = {
         "tipul alimentului",
         "caracterele de patogenitate"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 37,
@@ -562,7 +562,7 @@ const sigurantasisecuritate = {
         "rezoluții",
         "decizii"
       ],
-      correct: [0, 1, 2]
+      correct: [0, 2]
     },
     {
       id: 57,

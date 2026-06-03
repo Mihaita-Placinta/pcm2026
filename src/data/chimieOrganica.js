@@ -12,7 +12,7 @@ const chimieOrganica = {
         "etenă",
         "butan"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const chimieOrganica = {
         "alchene",
         "arene"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 5,
@@ -90,13 +90,13 @@ const chimieOrganica = {
       options: [
         "orto-dinitrbenzen",
         "meta-dinitrbenzen",
-        "1,3,5 trinitrbbenzen"
+        "1,3,5 trinitrobenzen"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 10,
-      question: "Radicalul -CH₃-CH₃ se numește:",
+      question: "Radicalul -CH2-CH3 se numește:",
       options: [
         "etil",
         "metil",
@@ -112,7 +112,7 @@ const chimieOrganica = {
         "propanului",
         "acetilenei"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 12,
@@ -157,18 +157,18 @@ const chimieOrganica = {
         "/images/chorg15b.png",
         "/images/chorg15c.png"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 16,
       question: "Compusul cu formula de mai jos se numește:",
       questionImage: "/images/question16chorg.png",
       options: [
-        "tolueni",
+        "toluen",
         "metilbenzen",
         "xilen"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 17,
@@ -250,7 +250,7 @@ const chimieOrganica = {
         "C₂H₅-OH",
         "CH₃-OH"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 25,
@@ -291,7 +291,7 @@ const chimieOrganica = {
         "glicerina",
         "glicerol"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 29,
@@ -302,7 +302,7 @@ const chimieOrganica = {
         "reversibilă",
         "o decarboxilare"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 30,
@@ -313,7 +313,7 @@ const chimieOrganica = {
         "obținerea unei aldehide",
         "obținerea unui acid carboxylic"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 31,
@@ -334,7 +334,7 @@ const chimieOrganica = {
         "etilenglicol",
         "1,2-etandiol"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 33,
@@ -364,7 +364,7 @@ const chimieOrganica = {
         "monoamină",
         "amină primară"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 36,
@@ -374,7 +374,7 @@ const chimieOrganica = {
         "-NHR",
         "-NR₂"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 37,
@@ -384,7 +384,7 @@ const chimieOrganica = {
         "amine secundare",
         "amine terțiare"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 38,
@@ -394,7 +394,7 @@ const chimieOrganica = {
         "reducerea nitrodevivativilor",
         "decarboxilarea aminoacizilor"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 39,
@@ -404,7 +404,7 @@ const chimieOrganica = {
         "anhidride acide",
         "acizi carboxilici"
       ],
-      correct: [1]
+      correct: [0, 1, 2]
     },
     {
       id: 40,
@@ -414,11 +414,11 @@ const chimieOrganica = {
         "amine care se formează prin decarboxilarea unor aminoacizi diamino-monocarboxilici",
         "amine care se formează în procese de degradare ale substanțelor de natură proteică"
       ],
-      correct: [1]
+      correct: [0, 1, 2]
     },
     {
       id: 41,
-      question: "Urea este:",
+      question: "Ureea este:",
       options: [
         "amidă",
         "acid organic",
@@ -435,7 +435,7 @@ const chimieOrganica = {
         "aldehida acetică",
         "amida acidului acetic"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 43,
@@ -445,27 +445,27 @@ const chimieOrganica = {
         "esteri",
         "alcoli"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 44,
       question: "Hidroliza unei amide conduce la:",
       options: [
-        "acid caboxilic",
+        "acizi caboxilici",
         "amoniac",
         "apă"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 45,
       question: "Compusul cu formula CH₃-CO-CH₃ se numește:",
       options: [
-        "propanonie",
+        "propanana",
         "acetonă",
         "dimetilcetonă"
       ],
-      correct: [2]
+      correct: [0, 1, 2]
     },
     {
       id: 46,
@@ -475,7 +475,7 @@ const chimieOrganica = {
         "oxidarea blândă a alcoolilor primari",
         "oxidarea blândă a alcoolilor secundari"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 47,
@@ -555,14 +555,14 @@ const chimieOrganica = {
       questionImage: "/images/chorg54question.png",
       options: [
         "dietil-cetonă",
-        "3-pentanonia",
+        "3-pentanonă",
         "2-pentanonie"
       ],
       correct: [0, 1]
     },
     {
       id: 55,
-      question: "Prin adiția apei la alchinele cu peste 3 carboni în moleculă se poate obține (răspuns multiplu):",
+      question: "Prin adiţia apei la alchinele cu peste 3 carboni în moleculă se poate obţine (intermediar sau final):",
       options: [
         "enol",
         "cetonă",
@@ -578,7 +578,7 @@ const chimieOrganica = {
         "alcoli secundari",
         "alcoli terțiari"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 57,
@@ -609,7 +609,7 @@ const chimieOrganica = {
         "oxidarea cu reactivul Tollens",
         "oxidarea cu oxigen molecular"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 60,
@@ -640,7 +640,7 @@ const chimieOrganica = {
         "acidul benzoic",
         "acidul propanoic"
       ],
-      correct: [1]
+      correct: [0, 1, 2]
     },
     {
       id: 63,
@@ -650,7 +650,7 @@ const chimieOrganica = {
         "acid acetic",
         "otet"
       ],
-      correct: [1]
+      correct: [0, 1, 2]
     },
     {
       id: 64,
@@ -685,13 +685,13 @@ const chimieOrganica = {
     },
     {
       id: 67,
-      question: "Prin reacția de ionizare a unui acid carboxylic se obține:",
+      question: "Prin reacția de ionizare a unui acid carboxilic se obține:",
       options: [
         "ion carboxilat",
-        "ion hydroniu",
+        "ion hidroniu",
         "ion hidroxil"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 68,
@@ -701,17 +701,17 @@ const chimieOrganica = {
         "acidul tartric",
         "acidul malic"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 69,
-      question: "Reacția de neutralizare a unui acid carboxylic cu o bază conduce la:",
+      question: "Reacția de neutralizare a unui acid carboxilic cu o bază conduce la:",
       options: [
         "esterul acidului respectiv",
         "sarea acidului respectiv",
         "apă"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 70,
@@ -721,7 +721,7 @@ const chimieOrganica = {
         "oxidarea energică a alcoolului etilic",
         "fermentație acetică a alcoolului etilic"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     }
   ]
 };

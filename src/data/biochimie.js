@@ -298,7 +298,7 @@ const biochimie = {
         "amilopectină",
         "izoamiloza"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 30,
@@ -308,7 +308,7 @@ const biochimie = {
         "solvenți organici",
         "reactiv Schweizer (hidroxid tetra amoniu-cupric)"
       ],
-      correct: [2]
+      correct: [0, 1]
     },
     {
       id: 31,
@@ -338,7 +338,7 @@ const biochimie = {
         "ceride",
         "lecitine"
       ],
-      correct: [0]
+      correct: [0,1]
     },
     {
       id: 34,
@@ -382,7 +382,7 @@ const biochimie = {
     },
     {
       id: 38,
-      question: "Aceroleina, aldehidă toxică având mirosuri inecacios, poate lua naștere din glicerol, pe parcursul proceselor de prelucrare termică a grăsimilor, în urma unei reacții de:",
+      question: "Acroleina,, aldehidă toxică având mirosuri inecacios, poate lua naștere din glicerol, pe parcursul proceselor de prelucrare termică a grăsimilor, în urma unei reacții de:",
       options: [
         "deshidratare",
         "condensare",
@@ -438,7 +438,7 @@ const biochimie = {
         "indica gradul de prospetime al unei grăsimi",
         "caracterizeaza reacția de hidroliză a unei grăsimi"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2 ]
     },
     {
       id: 44,
@@ -458,7 +458,7 @@ const biochimie = {
         "oligopeptide (formate din 2-10 aminoacizi)",
         "polipeptide (formate din peste 10 aminoacizi)"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 46,
@@ -478,7 +478,7 @@ const biochimie = {
         "polipeptidă",
         "oligopeptidă"
       ],
-      correct: [2]
+      correct: [0,2]
     },
     {
       id: 48,
@@ -498,7 +498,7 @@ const biochimie = {
         "grupărilor carboxil libere",
         "legăturilor peptidice pe care le conțin"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 50,
@@ -538,7 +538,7 @@ const biochimie = {
         "activării unor enzime",
         "proprietății sale de antioxidant"
       ],
-      correct: [0, 2]
+      correct: [0, 1, 2]
     },
     {
       id: 54,
@@ -616,9 +616,9 @@ const biochimie = {
       options: [
         "folosind literele alfabetului (majuscule) și eventual, indici numerici (denumire alfabetică)",
         "după structura chimică (denumire chimică)",
-        "după efectul farmacodynamic al vitaminei (denumire terapeutică)"
+        "după efectul farmacodinamic al vitaminei (denumire terapeutică)"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 62,

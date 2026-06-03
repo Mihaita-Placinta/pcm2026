@@ -12,7 +12,7 @@ const informaticaAplicata = {
         "Un software antivirus",
         "Un software de bază"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const informaticaAplicata = {
     },
     {
       id: 3,
-      question: "După care dintre următoarele caracteristici putem recunoaște o fereastră activă (răspuns multiplu):",
+      question: "După care dintre următoarele caracteristici puteți recunoaște o fereastră activă (răspuns multiplu):",
       options: [
         "Bara de titlu are culoare accentuată",
         "Apare ca buton în bara de stare",
@@ -82,7 +82,7 @@ const informaticaAplicata = {
         "Culoarea",
         "Orientarea"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 9,
@@ -112,7 +112,7 @@ const informaticaAplicata = {
         "Butonul Close",
         "Butonul de minimizare (Minimize)"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 12,
@@ -152,7 +152,7 @@ const informaticaAplicata = {
         "Un folder poate conține fișiere și/sau alte foldere",
         "Folderele pot contine doar fisiere"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 16,
@@ -192,7 +192,7 @@ const informaticaAplicata = {
         "Programatori",
         "Oameni de afaceri"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 20,
@@ -202,7 +202,7 @@ const informaticaAplicata = {
         "Dupa semnele de punctuatie (punct, virgula, doua puncte si virgula) se lasa un spatiu",
         "Inaintea semnelor de punctuatie (punct, virgula, doua puncte etc.) se lasa un spatiu"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 21,
@@ -382,7 +382,7 @@ const informaticaAplicata = {
         "Va semnaliza tipul fisierului",
         "Este localizat automat fisierul"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 39,
@@ -422,7 +422,7 @@ const informaticaAplicata = {
         "TAB, SHIFT, ALT",
         "CTRL, SHIFT, ALT"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 43,
@@ -492,7 +492,7 @@ const informaticaAplicata = {
         "Insert – Object_Equation",
         "Home – Format Font"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 50,
@@ -502,7 +502,7 @@ const informaticaAplicata = {
         "Memorie RAM",
         "Memory stick"
       ],
-      correct: [2]
+      correct: [0, 2]
     },
     {
       id: 51,
@@ -512,7 +512,7 @@ const informaticaAplicata = {
         "File – Close",
         "File- Save as"
       ],
-      correct: [0]
+      correct: [0, 2]
     },
     {
       id: 52,
@@ -522,7 +522,7 @@ const informaticaAplicata = {
         "Memorii RAM, ROM",
         "Microprocesor, RAM, ROM, imprimantă, mouse"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 53,
@@ -562,7 +562,7 @@ const informaticaAplicata = {
         "Rata de refresh",
         "Cantitatea radiatiilor emise"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 57,
@@ -572,7 +572,7 @@ const informaticaAplicata = {
         "De capacitate redusă",
         "Rapida și de capacitate mare"
       ],
-      correct: [0]
+      correct: [0, 1]
     },
     {
       id: 58,
@@ -592,7 +592,7 @@ const informaticaAplicata = {
         "Aplicatiile software",
         "Softul de securitate"
       ],
-      correct: [1]
+      correct: [1, 2]
     },
     {
       id: 60,
@@ -602,7 +602,7 @@ const informaticaAplicata = {
         "Microsoft Excel, Access, Antivirus",
         "Microsoft Word, PowerPoint, Windows Explorer"
       ],
-      correct: [2]
+      correct: [1, 2]
     },
     {
       id: 61,
@@ -642,7 +642,7 @@ const informaticaAplicata = {
         "Sa gestioneze spatiul de memorare din memoria internă",
         "Sa gestioneze timpul de lucru al procesorului"
       ],
-      correct: [0]
+      correct: [0, 1, 2]
     },
     {
       id: 65,

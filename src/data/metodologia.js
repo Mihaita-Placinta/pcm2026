@@ -22,7 +22,7 @@ const metodologia = {
         "conservarea si valorificarea durabila a resurselor naturale, gestionarea riscurilor si implicarea structurilor de guvernanta in deciziile privind protectia mediului",
         "orientarea exclusiva catre cresterea economica, indiferent de impactul social si de mediu"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 3,
@@ -382,7 +382,7 @@ const metodologia = {
         "partial adevarat",
         "fals"
       ],
-      correct: [0]
+      correct: [2]
     },
     {
       id: 39,
@@ -422,7 +422,7 @@ const metodologia = {
         "o persoana fizica independenta de titularul proiectului",
         "o persoana fizica dependenta de titularul proiectului"
       ],
-      correct: [1]
+      correct: [0, 1]
     },
     {
       id: 43,
@@ -682,7 +682,7 @@ const metodologia = {
         "evalueaza si compara diferitele alternative de dezvoltare ale unei activitati antropice",
         "depind de opinia subiectiva a expertilor si evaluatorilor"
       ],
-      correct: [0, 1]
+      correct: [0, 1, 2]
     },
     {
       id: 69,
