@@ -10,6 +10,7 @@ import metodologia from "./metodologia.js";
 import principiisimetode from "./principiisimetode.js";
 import sigurantasisecuritate from "./sigurantasisecuritate.js";
 import tehnologiaproduselor from "./tehnologiaproduselor.js";
+import randomQuiz from "./randomQuestions.js";
 
 export const categories = [
   biochimie,
@@ -22,4 +23,5 @@ export const categories = [
   principiisimetode,
   sigurantasisecuritate,
   tehnologiaproduselor,
+  randomQuiz,
 ];
