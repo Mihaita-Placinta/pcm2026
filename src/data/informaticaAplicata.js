@@ -112,7 +112,7 @@ const informaticaAplicata = {
         "Butonul Close",
         "Butonul de minimizare (Minimize)"
       ],
-      correct: [1, 2]
+      correct: [0, 1]
     },
     {
       id: 12,

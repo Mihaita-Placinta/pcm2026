@@ -250,7 +250,7 @@ const chimieOrganica = {
         "C₂H₅-OH",
         "CH₃-OH"
       ],
-      correct: [0, 2]
+      correct: [0, 1]
     },
     {
       id: 25,
