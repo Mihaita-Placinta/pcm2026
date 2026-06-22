@@ -33,15 +33,18 @@ function shuffleArray(array) {
   return shuffled;
 }
 
-// Shuffle and get first 45 questions
-const randomizedQuestions = shuffleArray(allQuestions).slice(0, 45);
-
-const randomQuiz = {
+const RANDOM_QUIZ_META = {
   id: "random",
   title: "Random Quiz - 45 Întrebări",
   icon: "🎲",
   color: "#9b59b6",
-  questions: randomizedQuestions
 };
+
+export function generateRandomQuiz() {
+  return { ...RANDOM_QUIZ_META, questions: shuffleArray(allQuestions).slice(0, 45) };
+}
+
+// Static export for the category grid (questions count display)
+const randomQuiz = generateRandomQuiz();
 
 export default randomQuiz;

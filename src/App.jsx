@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { categories } from "./data/quizData";
+import { generateRandomQuiz } from "./data/randomQuestions";
 import LoginScreen from "./LoginScreen.jsx";
 
 // ─── tiny helpers ────────────────────────────────────────────────────────────
@@ -392,7 +393,7 @@ export default function App() {
   }
 
   function startQuiz(cat) {
-    setActiveCategory(cat);
+    setActiveCategory(cat.id === "random" ? generateRandomQuiz() : cat);
     setScreen("quiz");
   }
 
@@ -403,6 +404,9 @@ export default function App() {
 
   function restartQuiz() {
     setFinalAnswers([]);
+    if (activeCategory?.id === "random") {
+      setActiveCategory(generateRandomQuiz());
+    }
     setScreen("quiz");
   }
 
