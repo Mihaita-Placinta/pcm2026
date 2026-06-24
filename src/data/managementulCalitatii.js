@@ -502,7 +502,7 @@ const managementulCalitatii = {
         "produse si servicii; personal; procese",
         "echipe; instrumente; sisteme"
       ],
-      correct: [0, 1]
+      correct: [1]
     },
     {
       id: 51,
