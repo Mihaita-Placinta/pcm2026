@@ -152,7 +152,7 @@ const metodologia = {
         "bilantului de mediu",
         "raportului de amplasament"
       ],
-      correct: [1]
+      correct: [2]
     },
     {
       id: 16,
